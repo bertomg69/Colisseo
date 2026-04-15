@@ -1,0 +1,99 @@
+body.cuerpo {font-family: 'Tahoma';} /*ReqC1*/ /*ReqC8*/
+
+body {
+    box-sizing: border-box;
+}
+
+body.cuerpo h1 {    /*ReqC3*/
+    font-size: 4rem; /*ReqC2*/
+    color: darkred;
+    text-align: center;
+    padding: 0px;
+    
+}
+body.cuerpo h3 {    /*ReqC3*/
+    font-size: 2rem; /*ReqC2*/
+    color: darkgoldenrod;
+    text-align: center;
+    padding: 0rem;/*Req24*/
+    
+}
+
+main { /*ReqC4*/
+    margin: 0 auto;
+}
+header, footer{ /*ReqC6*/
+    margin: 10px;
+    padding: 5px;
+    background-color: lightgray;
+
+}
+article, section{ /*ReqC6*/
+    margin: 0.5rem;/*Req24*/;
+    padding: 0.25rem;/*Req24*/
+}
+nav{ /*ReqC6*/
+    margin: 0.5rem;/*Req24*/;
+    padding: 0.25rem;/*Req24*/
+    background-color: lightcyan;
+    border: 1px solid black;
+}
+
+table.horario { /*ReqC8*//*ReqC17*/
+    background-color: lightgoldenrodyellow;
+}
+
+#entrenadores{ /*ReqC9*/
+    text-align: center;
+    background-color: lightgreen;
+}
+
+table.horario td{/*ReqC10*//*ReqC18*/
+    color: darkslategrey;
+}
+
+nav > ul{/*ReqC11*/
+    font-weight: bold;
+}
+
+h1+h3{/*ReqC12*/
+    font-style: oblique;
+}
+
+nav a:hover{/*ReqC14*/
+    color: rgb(150, 50, 200);
+}
+
+table.horario {/*ReqC17*/
+    caption-side: top
+}
+
+table.horario th{/*ReqC18*/
+    font-style: oblique;
+}
+
+input, textarea, select {/* ReqC19 */
+    color: darkslateblue;
+    background-color: lightgray;
+}
+input:focus, textarea:focus, select:focus {/* ReqC19 */
+    background-color: lightcyan;
+}
+
+input:required, textarea:required {/* ReqC19 */
+  border-left: 4px solid red;
+}
+
+button:hover {/* ReqC20*/
+    background-color: gray;
+    font-style: italic;
+}
+
+.highlight {
+    border: 2px solid orange;   
+    background-color: #fff3d9;  
+    box-shadow: 0 0 5px orange;    
+}
+
+
+

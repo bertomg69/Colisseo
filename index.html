@@ -1,0 +1,164 @@
+<!DOCTYPE html> <!--ReqH1-->
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>COLISSEO - Centro de Musculación</title>
+    <meta author="Alberto">
+    <meta email="UO306976@uniovi.es">
+    <meta location="Asturias">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="gimnasio, ejercicio, entreno, dieta">
+    <script src="js/myJS.js" defer></script>
+    <script defer src="./js/i18n/translations.js"></script>
+    <script defer src="./js/i18n/i18n.js"></script>
+</head> <!--ReqH2-->
+
+<body class="cuerpo">
+    <header>
+        <div class="language-box">
+            <label for="language-switcher" data-i18n="common.language.label">Idioma</label>
+            <select id="language-switcher" onchange="setLocale(this.value)">
+                <option value="es" data-i18n="common.language.spanish">Español</option>
+                <option value="en" data-i18n="common.language.english">English</option>
+            </select>
+        </div>
+        <h1><strong>COLISSEO</strong><!--ReqH6--></h1>
+        <h3 data-i18n="site.titulo">Centro de musculación</h3>
+
+    </header><!--ReqH3-->
+
+    <main>
+        <nav>
+            <ul>
+                <li><a href="#info" data-i18n="navigation.info"><em>Información</em><!--ReqH3--> </a></li>
+                <li><a href="#entrenadores" data-i18n="navigation.entrenadores"><em>Nuestros
+                            entrenadores</em><!--ReqH3--></a></li>
+                <li><a href="#actividades" data-i18n="navigation.actividades"><em>Actividades semanales del
+                            Colisseo</em><!--ReqH3--></a></li>
+                <li><a href="#formulario" data-i18n="navigation.formulario"><em>Formulario de
+                            ingreso</em><!--ReqH3--></a></li>
+
+            </ul>
+        </nav><!--ReqH8-->
+
+        <section id="info">
+            <h2>Información</h2>
+            <p>Tenemos actividades semanales y libre acceso a las instalaciones desde primera hasta última hora del día!
+            </p>
+            <p><cite>Colisseo queremos que todos nuestros clientes esten contentos, pero sobretodo... EN FORMA!</cite>
+            </p>
+            <p><span data-i18n="events.monthlyMeeting.feeLabel">Cuota:</span>
+                <em id="monthly-meeting-fee" data-fee="12.5"></em>
+            </p>
+            <p><span data-i18n="events.monthlyMeeting.dateLabel">Fecha:</span>
+                <em id="monthly-meeting-date" data-date="2026-07-15T19:00:00"></em></p>
+        </section><!--ReqH7-->
+
+        <section id="entrenadores">
+            <h2>Nuestros entrenadores</h2>
+            <figure>
+                <a href="../Recursos/entrenadora_jessica.png">
+                    <img src="../Recursos/entrenadora_jessica.png" alt="Imagen de la entrenadora"
+                        title="Entrenadora Jess" width="150" height="225">
+                </a>
+                <a href="../Recursos/entrenador_fran.png">
+                    <img src="../Recursos/entrenador_fran.png" alt="Imagen del entrenador" title="Entrenador Fran"
+                        width="150" height="225">
+                </a><!--ReqH10-->
+                <figcaption>Nuestros entrenadores. Te ayudarán en lo que haga falta!</figcaption>
+                <p><a href="../Recursos/colisseo_logo.png">Logo de Colisseo</a><!--ReqH11--> </p>
+            </figure><!--ReqH12-->
+        </section>
+
+        <section id="actividades">
+            <table class="horario" border="5">
+                <caption><strong>HORARIO DE ACTIVIDADES</strong></caption>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>LUNES</th>
+                        <th>MARTES</th>
+                        <th>MIÉRCOLES</th>
+                        <th>JUEVES</th>
+                        <th>VIERNES</th>
+                        <th colspan="2">FINES DE SEMANA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Mañana (09:00 a 14:00)</td>
+                        <td colspan="2">Boxeo</td>
+                        <td rowspan="4">Maratón</td>
+                        <td rowspan="2">Artes Marciales</td>
+                        <td rowspan="2">Fútbol</td>
+                        <td rowspan="4">Sesiones de yoga con Fran y Jessica</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Clase de zumba dirigida por nuestro entrenador Fran</td>
+                    </tr>
+                    <tr>
+                        <td>Tarde (16:00 a 22:00)</td>
+                        <td>Tai chi (con Jessica)</td>
+                        <td>Natación</td>
+                        <td>Natación</td>
+                        <td>Baloncesto</td>
+                    </tr>
+                </tbody>
+            </table><!--ReqH15-->
+        </section><!--ReqH3-->
+    </main><!--ReqH3-->
+
+    <footer>
+        <section>
+            <form id="formulario" name="Formulario de Contacto" action="mailto:join@colisseo.com?subject=Contact%20Form"
+                onkeydown="handleKeydown(event)" onkeyup="handleKeyup(event)" onsubmit="return validateForm();"
+                method="post"><!--ReqH16-->
+                <fieldset>
+                    <legend>Información de contacto</legend>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" onmouseover="handleMouseOver(this)"
+                        onmouseout="handleMouseOut(this)" required oninput="updatePreview(); checkValidityState(this)">
+                    <label for="phone">Teléfono:</label>
+                    <input type="tel" id="phone" name="phone" pattern="^(\+34|0034|34)?[67][0-9]{8}$"
+                        onmouseover="handleMouseOver(this)" onmouseout="handleMouseOut(this)" required
+                        oninput="updatePreview()">
+                    <label for="email">Correo:</label>
+                    <input type="email" id="email" name="email" onmouseover="handleMouseOver(this)"
+                        onmouseout="handleMouseOut(this)" required oninput="updatePreview(); checkValidityState(this)">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" onmouseover="handleMouseOver(this)"
+                        onmouseout="handleMouseOut(this)" required
+                        oninput="updatePreview(); checkValidityState(this)">Escribe tu mensaje aquí</textarea>
+                    <button type="submit" id="submit-btn">Enviar mensaje</button>
+                    <button type="reset">Reset</button>
+                </fieldset>
+                <fieldset>
+                    <legend>¿Por qué quieres apuntarte a Colisseo?</legend>
+                    <input type="radio" id="forma" name="discovery" value="forma"
+                        onchange="updatePreview(); checkValidityState(this)">
+                    <label for="forma">Quiero ponerme en forma!</label>
+                    <input type="radio" id="friend" name="discovery" value="friend"
+                        onchange="updatePreview(); checkValidityState(this)">
+                    <label for="friend">Vengo a probar deportes nuevos!</label>
+                    <input type="radio" id="otro" name="discovery" value="otro"
+                        onchange="updatePreview(); checkValidityState(this)">
+                    <label for="otro">Otro motivo</label>
+                </fieldset>
+                <input type="checkbox" id="fiction" name="interests" value="fiction"
+                    onchange="updatePreview(); checkValidityState(this)">
+                <label for="fiction">Estoy interesado en las actividades semanales</label>
+            </form>
+        </section>
+
+        <section id="preview">
+            <h2>Vista previa</h2>
+            <div id="preview-content">
+                <p>La vista previa se mostrará aquí.</p>
+            </div>
+        </section>
+    </footer><!--ReqH3-->
+</body>
+
+</html>

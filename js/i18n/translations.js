@@ -1,0 +1,40 @@
+window.translations = {
+    es: {
+        'site.titulo': 'Centro de musculación',
+        'navigation.info': 'Información',
+        'navigation.entrenadores': 'Entrenadores',
+        'navigation.actividades': 'Actividades',
+        'navigation.formulario': 'Formulario',
+        'controls.language.label': 'Idioma',
+        'controls.language.spanish': 'Español',
+        'controls.language.english': 'Inglés',
+        'home.welcomeTitle': 'Bienvenido al Club de Lectura',
+        'home.welcomeText': 'Descubre nuevas historias, comparte impresiones y participa en nuestros encuentros.',
+        'home.joinButton': 'Únete al club',
+        'events.monthlyMeeting.dateLabel': 'Fecha:',
+        'events.monthlyMeeting.feeLabel': 'Cuota:',
+        'events.monthlyMeeting.summaryTitle': 'Resumen del encuentro',
+        'events.monthlyMeeting.placeValue': 'Biblioteca Municipal',
+        'events.monthlyMeeting.bookTitle': 'Matar a un ruiseñor',
+        'footer.rights': 'Todos los derechos reservados'
+    },
+    en: {
+        'site.titulo': 'BodyBuilding',
+        'navigation.info': 'Information',
+        'navigation.entrenadores': 'Trainers', 
+        'navigation.actividades': 'Activities',
+        'navigation.formulario': 'form',
+        'controls.language.label': 'Language',
+        'controls.language.spanish': 'Spanish',
+        'controls.language.english': 'English',
+        'home.welcomeTitle': 'Welcome to the Book Club',
+        'home.welcomeText': 'Discover new stories, share your opinions and take part in our meetings.',
+        'home.joinButton': 'Join the club',
+        'events.monthlyMeeting.dateLabel': 'Date:',
+        'events.monthlyMeeting.feeLabel': 'Fee:',
+        'events.monthlyMeeting.summaryTitle': 'Meeting summary',
+        'events.monthlyMeeting.placeValue': 'City Library',
+        'events.monthlyMeeting.bookTitle': 'To Kill a Mockingbird',
+        'footer.rights': 'All rights reserved'
+    }
+};
