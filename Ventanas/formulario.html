@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap">
+    <title>COLISSEO - Inscríbete</title>
+    <meta author="Alberto">
+    <meta email="UO306976@uniovi.es">
+    <meta location="Asturias">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="gimnasio, ejercicio, entreno, dieta">
+    <script src="../js/myJS.js" defer></script>
+    <script defer src="../js/i18n/translations.js"></script>
+    <script defer src="../js/i18n/i18n.js"></script>
+</head>
+
+<body>
+    <header id="TituloForm">
+        <h1>Formulario de inscripción</h1>
+    </header>
+    <main>
+        <section>
+            <form id="formulario" name="Formulario de Contacto" action="mailto:join@colisseo.com?subject=Contact%20Form"
+                onkeydown="handleKeydown(event)" onkeyup="handleKeyup(event)" onsubmit="return validateForm();"
+                method="post"><!--ReqH16-->
+                <fieldset>
+                    <legend>Información de contacto</legend>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" onmouseover="handleMouseOver(this)"
+                        onmouseout="handleMouseOut(this)" required oninput="updatePreview(); checkValidityState(this)">
+                    <label for="phone">Teléfono:</label>
+                    <input type="tel" id="phone" name="phone" pattern="^(\+34|0034|34)?[67][0-9]{8}$"
+                        onmouseover="handleMouseOver(this)" onmouseout="handleMouseOut(this)" required
+                        oninput="updatePreview()">
+                    <label for="email">Correo:</label>
+                    <input type="email" id="email" name="email" onmouseover="handleMouseOver(this)"
+                        onmouseout="handleMouseOut(this)" required oninput="updatePreview(); checkValidityState(this)">
+                    <label for="message">Información adicional:</label>
+                    <!--ReqI18N-->
+                    <textarea id="message" name="message" data-i18n-placeholder="form.mensaje"  placeholder="Escribe aquí..." onmouseover="handleMouseOver(this)"
+                        onmouseout="handleMouseOut(this)" required
+                        oninput="updatePreview(); checkValidityState(this)"></textarea>
+                    <button type="submit" id="submit-btn">Enviar mensaje</button>
+                    <button type="reset">Reset</button>
+                </fieldset>
+                <fieldset>
+                    <legend>¿Por qué quieres apuntarte a Colisseo?</legend>
+                    <input type="radio" id="forma" name="discovery" value="forma"
+                        onchange="updatePreview(); checkValidityState(this)">
+                    <label for="forma">Quiero ponerme en forma!</label>
+                    <input type="radio" id="friend" name="discovery" value="friend"
+                        onchange="updatePreview(); checkValidityState(this)">
+                    <label for="friend">Vengo a probar deportes nuevos!</label>
+                    <input type="radio" id="otro" name="discovery" value="otro"
+                        onchange="updatePreview(); checkValidityState(this)">
+                    <label for="otro">Otro motivo</label>
+                </fieldset>
+                <input type="checkbox" id="fiction" name="interests" value="fiction"
+                    onchange="updatePreview(); checkValidityState(this)">
+                <label for="fiction">Estoy interesado en las actividades semanales</label>
+            </form>
+        </section>
+
+        <section id="preview">
+            <h2>Vista previa</h2>
+            <div id="preview-content">
+                <p>La vista previa se mostrará aquí.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Gracias por contar con nosotros!</p>
+        <p>Colisseo: Tú progreso, nuestra prioridad.</p>
+        <figure>
+            <a href="../Recursos/colisseo_logo.png">
+                <img src="../Recursos/colisseo_logo.png" alt="Imagen del logo de Colisseo" title="Nuestro Logo" width="300">
+            </a>
+        </figure>
+    </footer>
+</body>
+</html>

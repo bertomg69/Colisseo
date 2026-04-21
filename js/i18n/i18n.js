@@ -3,38 +3,45 @@ const translatableElements = document.querySelectorAll('[datai18n]');
 const languageSwitcher = document.querySelector('#languageswitcher');
 if (translatableElements.length === 0 && !languageSwitcher) {
     console.log('Esta página todavía no está preparada para i18n.');
-} else { }
+} else { }/* ReqI18N1 */
 
 
 
-'use strict';
-function applyTranslations(locale) {
-    const translatableElements =
-        document.querySelectorAll('[data-i18n]');
-    const labelElements = document.querySelectorAll('[data-i18nlabel]');
-    const dict = window.translations?.[locale];
-    //Primer for para recorrer elementos traducibles con text.Content()
-    for (let i = 0; i < translatableElements.length; i++) {
-        const element = translatableElements[i];
-        const key = element.dataset.i18n;
-        const translatedText = dict[key];
-        if (translatedText) {
-            element.textContent = translatedText;
-        }
-    }
-    //Segundo for, elementos 'especiales, atributos: label, alt, placeholder...
-    for (let i = 0; i < labelElements.length; i++) {
-        const element = labelElements[i];
-        const key = element.dataset.i18n;
-        const translatedLabel = dict[key];
-        if (translatedLabel) {
-            element.setAttribute('label', translatedLabel);
-        }
-    }
-    document.documentElement.lang = locale;
-}
+'use strict'; 
+ 
+function applyTranslations(locale) { 
+    const translatableElements = 
+document.querySelectorAll('[data-i18n]'); 
+    const placeholderElements = 
+document.querySelectorAll('[data-i18n-placeholder]'); 
+    const dict = window.translations?.[locale]; 
+ 
+    for (let i = 0; i < translatableElements.length; i++) { 
+        const element = translatableElements[i]; 
+        const key = element.dataset.i18n; 
+        const translatedText = dict[key]; 
+ 
+        if (translatedText) { 
+            element.textContent = translatedText; 
+        } 
+    } 
+ 
+ // For para traducir textos en atributos: placeholders
+for (let i = 0; i < placeholderElements.length; i++) { 
+        const element = placeholderElements[i]; 
+        const key = element.dataset.i18nPlaceholder; 
+        const translatedPlaceholder = dict[key]; 
+ 
+        if (translatedPlaceholder) { 
+            element.setAttribute('placeholder', 
+translatedPlaceholder); 
+        } 
+    } 
+    document.documentElement.lang = locale; 
+} /* ReqI18N4 */ /* ReqI18N5 */
+
 //LLAMADA A LA FUNCIÓN 
-applyTranslations('en');
+applyTranslations('en');/* ReqI18N4 */
 
 function setLocale(locale) {
     const selectedLocale = window.translations[locale] ? locale : 'es';
@@ -80,7 +87,8 @@ function formatDate(dateValue, locale) {
         dateStyle: 'long',
         timeStyle: 'short'
     }).format(dateValue);
-}
+}/* ReqI18N7 */
+
 //Formateo regional de numeros y precios
 function formatCurrency(amount, locale) {
     const resolvedLocale = locale === 'en' ? 'en-US' : 'es-ES';
@@ -89,7 +97,7 @@ function formatCurrency(amount, locale) {
         style: 'currency',
         currency: currency
     }).format(amount);
-}
+}/* ReqI18N7 */
 
 
 function updateDynamicContent(locale) {
@@ -104,4 +112,4 @@ function updateDynamicContent(locale) {
         const rawFee = Number(meetingFeeBox.dataset.fee);
         meetingFeeBox.textContent = formatCurrency(rawFee, locale);
     }
-}
+}/* ReqI18N7 */

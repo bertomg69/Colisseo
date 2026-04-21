@@ -1,9 +1,10 @@
 <!DOCTYPE html> <!--ReqH1-->
-<html lang="en">
+<html lang="es">
 
 <head>
     <link rel="stylesheet" href="css/styles.css">
-    <title>COLISSEO - Centro de Musculación</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap">
+    <title>Colisseo - Inicio</title>
     <meta author="Alberto">
     <meta email="UO306976@uniovi.es">
     <meta location="Asturias">
@@ -17,14 +18,16 @@
 
 <body class="cuerpo">
     <header>
-        <div class="language-box">
-            <label for="language-switcher" data-i18n="common.language.label">Idioma</label>
+        <div class="language-box"> <!--ReqI18N6-->
+            <label for="language-switcher" data-i18n="controls.language.label">Idioma</label>
             <select id="language-switcher" onchange="setLocale(this.value)">
                 <option value="es" data-i18n="common.language.spanish">Español</option>
                 <option value="en" data-i18n="common.language.english">English</option>
             </select>
         </div>
+
         <h1><strong>COLISSEO</strong><!--ReqH6--></h1>
+
         <h3 data-i18n="site.titulo">Centro de musculación</h3>
 
     </header><!--ReqH3-->
@@ -32,133 +35,62 @@
     <main>
         <nav>
             <ul>
-                <li><a href="#info" data-i18n="navigation.info"><em>Información</em><!--ReqH3--> </a></li>
-                <li><a href="#entrenadores" data-i18n="navigation.entrenadores"><em>Nuestros
-                            entrenadores</em><!--ReqH3--></a></li>
-                <li><a href="#actividades" data-i18n="navigation.actividades"><em>Actividades semanales del
-                            Colisseo</em><!--ReqH3--></a></li>
-                <li><a href="#formulario" data-i18n="navigation.formulario"><em>Formulario de
-                            ingreso</em><!--ReqH3--></a></li>
+                <li><a href="#info" data-i18n="navigation.info"><em>Información</em><!--ReqH3--> </a></li><!--ReqI18N2-->
+                <li><a href="#entrenadores" data-i18n="navigation.entrenadores"><em>Nuestros entrenadores</em><!--ReqH3--></a></li>
+                <li><a href="#estancias" data-i18n="navigation.instalaciones"><em>Instalaciones</em></a></li>
+                <li><a href="Ventanas/horarios.html" data-i18n="navigation.horarios"><em>Horarios</em><!--ReqH3--></a></li>
+                <li><a href="Ventanas/formulario.html" data-i18n="navigation.formulario"><em>Formulario de ingreso</em><!--ReqH3--></a></li>
 
             </ul>
         </nav><!--ReqH8-->
 
         <section id="info">
-            <h2>Información</h2>
-            <p>Tenemos actividades semanales y libre acceso a las instalaciones desde primera hasta última hora del día!
-            </p>
-            <p><cite>Colisseo queremos que todos nuestros clientes esten contentos, pero sobretodo... EN FORMA!</cite>
-            </p>
-            <p><span data-i18n="events.monthlyMeeting.feeLabel">Cuota:</span>
-                <em id="monthly-meeting-fee" data-fee="12.5"></em>
-            </p>
-            <p><span data-i18n="events.monthlyMeeting.dateLabel">Fecha:</span>
-                <em id="monthly-meeting-date" data-date="2026-07-15T19:00:00"></em></p>
+            <h2 data-i18n="texto.info">Sobre nosotros</h2><!--ReqI18N2-->
+            <p data-i18n="texto.info1"><cite>En Colisseo queremos que todos nuestros clientes estén contentos, pero sobretodo... EN FORMA!</cite></p>
+            <p data-i18n="texto.info2">Tenemos actividades semanales y libre acceso a las instalaciones desde primera hasta última hora del día!</p>
+            <p data-i18n="texto.info3">¡Y no te olvides de nuestra fiesta anual! No te preocupes, ese día nuestros entrenadores hacen la vista gorda ; ) </p>
+            <p><span data-i18n="events.monthlyMeeting.feeLabel">Cuota mensual:</span><em id="monthly-meeting-fee" data-fee="25"></em></p> <!--ReqI18N8-->
+            <p><span data-i18n="events.monthlyMeeting.dateLabel">Próxima fiesta anual</span> <em id="monthly-meeting-date" data-date="2026-07-15T19:00:00"></em></p> <!--ReqI18N8-->
         </section><!--ReqH7-->
 
         <section id="entrenadores">
-            <h2>Nuestros entrenadores</h2>
+            <h2 data-i18n="texto.entrenadores">Nuestros entrenadores personales</h2>
             <figure>
                 <a href="./Recursos/entrenadora_jessica.png">
-                    <img src="./Recursos/entrenadora_jessica.png" alt="Imagen de la entrenadora"
-                        title="Entrenadora Jess" width="150" height="225">
+                    <img src="./Recursos/entrenadora_jessica.png" alt="Imagen de la entrenadora" title="Entrenadora Jess" width="300">
                 </a>
                 <a href="./Recursos/entrenador_fran.png">
-                    <img src="./Recursos/entrenador_fran.png" alt="Imagen del entrenador" title="Entrenador Fran"
-                        width="150" height="225">
+                    <img src="./Recursos/entrenador_fran.png" alt="Imagen del entrenador" title="Entrenador Fran" width="300">
                 </a><!--ReqH10-->
-                <figcaption>Nuestros entrenadores. Te ayudarán en lo que haga falta!</figcaption>
-                <p><a href="./Recursos/colisseo_logo.png">Logo de Colisseo</a><!--ReqH11--> </p>
+                <figcaption data-i18n="texto.entrenadores.info">Estos son nuestros entrenadores personales, Jessica y Fran. Te ayudarán en lo que haga falta!</figcaption>
+            </figure><!--ReqH12-->
+        </section>
+        <section id="estancias">
+            <h2 data-i18n="texto.estancias">Estancias del Colisseo</h2>
+            <figure>
+                <a href="./Recursos/colisseo_recepcion.png">
+                    <img src="./Recursos/colisseo_recepcion.png" alt="Imagen de la recepción" title="Recepción" width="585">
+                </a>
+                <a href="./Recursos/colisseo_sala.png">
+                    <img src="./Recursos/colisseo_sala.png" alt="Imagen de la sala de entreno" title="Sala de máquinas" width="585">
+                </a><!--ReqH10-->
+                <a href="./Recursos/colisseo_piscina.png">
+                    <img src="./Recursos/colisseo_piscina.png" alt="Imagen de la piscina" title="Zona de la piscina" width="585">
+                </a>
+                <figcaption data-i18n="texto.estancias.info">Las estancias del Colisseo</figcaption>
             </figure><!--ReqH12-->
         </section>
 
-        <section id="actividades">
-            <table class="horario" border="5">
-                <caption><strong>HORARIO DE ACTIVIDADES</strong></caption>
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>LUNES</th>
-                        <th>MARTES</th>
-                        <th>MIÉRCOLES</th>
-                        <th>JUEVES</th>
-                        <th>VIERNES</th>
-                        <th colspan="2">FINES DE SEMANA</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td rowspan="2">Mañana (09:00 a 14:00)</td>
-                        <td colspan="2">Boxeo</td>
-                        <td rowspan="4">Maratón</td>
-                        <td rowspan="2">Artes Marciales</td>
-                        <td rowspan="2">Fútbol</td>
-                        <td rowspan="4">Sesiones de yoga con Fran y Jessica</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Clase de zumba dirigida por nuestro entrenador Fran</td>
-                    </tr>
-                    <tr>
-                        <td>Tarde (16:00 a 22:00)</td>
-                        <td>Tai chi (con Jessica)</td>
-                        <td>Natación</td>
-                        <td>Natación</td>
-                        <td>Baloncesto</td>
-                    </tr>
-                </tbody>
-            </table><!--ReqH15-->
-        </section><!--ReqH3-->
+
     </main><!--ReqH3-->
 
     <footer>
-        <section>
-            <form id="formulario" name="Formulario de Contacto" action="mailto:join@colisseo.com?subject=Contact%20Form"
-                onkeydown="handleKeydown(event)" onkeyup="handleKeyup(event)" onsubmit="return validateForm();"
-                method="post"><!--ReqH16-->
-                <fieldset>
-                    <legend>Información de contacto</legend>
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" onmouseover="handleMouseOver(this)"
-                        onmouseout="handleMouseOut(this)" required oninput="updatePreview(); checkValidityState(this)">
-                    <label for="phone">Teléfono:</label>
-                    <input type="tel" id="phone" name="phone" pattern="^(\+34|0034|34)?[67][0-9]{8}$"
-                        onmouseover="handleMouseOver(this)" onmouseout="handleMouseOut(this)" required
-                        oninput="updatePreview()">
-                    <label for="email">Correo:</label>
-                    <input type="email" id="email" name="email" onmouseover="handleMouseOver(this)"
-                        onmouseout="handleMouseOut(this)" required oninput="updatePreview(); checkValidityState(this)">
-                    <label for="message">Mensaje:</label>
-                    <textarea id="message" name="message" onmouseover="handleMouseOver(this)"
-                        onmouseout="handleMouseOut(this)" required
-                        oninput="updatePreview(); checkValidityState(this)">Escribe tu mensaje aquí</textarea>
-                    <button type="submit" id="submit-btn">Enviar mensaje</button>
-                    <button type="reset">Reset</button>
-                </fieldset>
-                <fieldset>
-                    <legend>¿Por qué quieres apuntarte a Colisseo?</legend>
-                    <input type="radio" id="forma" name="discovery" value="forma"
-                        onchange="updatePreview(); checkValidityState(this)">
-                    <label for="forma">Quiero ponerme en forma!</label>
-                    <input type="radio" id="friend" name="discovery" value="friend"
-                        onchange="updatePreview(); checkValidityState(this)">
-                    <label for="friend">Vengo a probar deportes nuevos!</label>
-                    <input type="radio" id="otro" name="discovery" value="otro"
-                        onchange="updatePreview(); checkValidityState(this)">
-                    <label for="otro">Otro motivo</label>
-                </fieldset>
-                <input type="checkbox" id="fiction" name="interests" value="fiction"
-                    onchange="updatePreview(); checkValidityState(this)">
-                <label for="fiction">Estoy interesado en las actividades semanales</label>
-            </form>
-        </section>
-
-        <section id="preview">
-            <h2>Vista previa</h2>
-            <div id="preview-content">
-                <p>La vista previa se mostrará aquí.</p>
-            </div>
-        </section>
+        <p data-i18n="texto.eslogan">Colisseo: Tú progreso, nuestra prioridad.</p>
+        <figure>
+            <a href="./Recursos/colisseo_logo.png">
+                <img src="./Recursos/colisseo_logo.png" alt="Imagen del logo de Colisseo" title="Nuestro Logo" width="300">
+            </a>
+        </figure>
     </footer><!--ReqH3-->
 </body>
-
 </html>

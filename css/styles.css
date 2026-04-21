@@ -1,67 +1,134 @@
-body.cuerpo {font-family: 'Tahoma';} /*ReqC1*/ /*ReqC8*/
+/*GENERAL Y VENTANA PRINCIPAL*/
+
+body{font-family: 'Montserrat';} /*ReqC1*/ /*ReqC8*/
 
 body {
     box-sizing: border-box;
+        background-color: #0d1b2a;
+        color: rgb(200, 200, 200);
 }
 
 body.cuerpo h1 {    /*ReqC3*/
     font-size: 4rem; /*ReqC2*/
-    color: darkred;
     text-align: center;
-    padding: 0px;
+    padding: 0rem;
+    margin-top: 10px;
+    margin-bottom: 0;
     
 }
 body.cuerpo h3 {    /*ReqC3*/
     font-size: 2rem; /*ReqC2*/
-    color: darkgoldenrod;
     text-align: center;
     padding: 0rem;/*Req24*/
-    
+    margin-top: 0;
+    margin-bottom: 35px;   
+}
+
+h1+h3{/*ReqC12*/ /*hijo directo de h1*/
+    font-style: oblique;
+}
+
+header {
+    border: 2px solid rgb(200, 200, 200);
+    margin-bottom:100px;
+    background-color: #1b263b;
 }
 
 main { /*ReqC4*/
-    margin: 0 auto;
+    margin: 0 auto
 }
-header, footer{ /*ReqC6*/
-    margin: 10px;
-    padding: 5px;
-    background-color: lightgray;
 
+
+footer{ /*ReqC6*/
+    margin-top: 100px;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
 }
+
+footer img{
+   border: 5px solid rgb(200, 200, 200); 
+}
+
+.language-box {
+    text-align: right;
+    color: wheat;
+}
+
 article, section{ /*ReqC6*/
     margin: 0.5rem;/*Req24*/;
     padding: 0.25rem;/*Req24*/
+    border: 2px solid rgb(200, 200, 200);
+    background-color: #1b263b;
 }
+
 nav{ /*ReqC6*/
     margin: 0.5rem;/*Req24*/;
     padding: 0.25rem;/*Req24*/
-    background-color: lightcyan;
-    border: 1px solid black;
-}
-
-table.horario { /*ReqC8*//*ReqC17*/
-    background-color: lightgoldenrodyellow;
-}
-
-#entrenadores{ /*ReqC9*/
-    text-align: center;
-    background-color: lightgreen;
-}
-
-table.horario td{/*ReqC10*//*ReqC18*/
-    color: darkslategrey;
+    margin-bottom: 600px;
+    margin-right: 850px;
+    margin-left: 850px;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: #1b263b;
 }
 
 nav > ul{/*ReqC11*/
     font-weight: bold;
 }
 
-h1+h3{/*ReqC12*/
-    font-style: oblique;
+nav a {
+    color: wheat;
+}
+
+nav a:visited{
+    color: whitesmoke;
 }
 
 nav a:hover{/*ReqC14*/
-    color: rgb(150, 50, 200);
+    color: #1b438e;
+}
+
+#entrenadores figure{ /*ReqC9*/
+    text-align: center;    
+}
+#entrenadores img{ /*ReqC9*/
+    border: 2px solid rgb(200, 200, 200);   
+}
+
+#estancias figure{
+    text-align: center;
+}
+
+#estancias img{
+    text-align: center;
+    border: 2px solid rgb(200, 200, 200);
+}
+
+
+
+
+
+
+/*HORARIOS*/
+
+#TituloHorarios{
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+
+table.horario { /*ReqC8*//*ReqC17*/
+    background-color: #1b263b;
+    margin: 0 auto;
+}
+
+#instalaciones{
+    margin-bottom: 50px;
+}
+
+table.horario td{/*ReqC10*//*ReqC18*/
+    color: rgb(200, 200, 200);
 }
 
 table.horario {/*ReqC17*/
@@ -69,11 +136,21 @@ table.horario {/*ReqC17*/
 }
 
 table.horario th{/*ReqC18*/
-    font-style: oblique;
+    font-weight: bold;
+}
+
+
+
+
+/*FORMULARIO*/
+
+#TituloForm{
+    text-align: center;
+    margin-bottom: 100px;
 }
 
 input, textarea, select {/* ReqC19 */
-    color: darkslateblue;
+    color: rgb(61, 104, 139);
     background-color: lightgray;
 }
 input:focus, textarea:focus, select:focus {/* ReqC19 */
@@ -81,7 +158,7 @@ input:focus, textarea:focus, select:focus {/* ReqC19 */
 }
 
 input:required, textarea:required {/* ReqC19 */
-  border-left: 4px solid red;
+    border-left: 4px solid red;
 }
 
 button:hover {/* ReqC20*/

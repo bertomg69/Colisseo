@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap">
+    <title>COLISSEO - Horarios</title>
+    <meta author="Alberto">
+    <meta email="UO306976@uniovi.es">
+    <meta location="Asturias">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="gimnasio, ejercicio, entreno, dieta">
+    <script src="../js/myJS.js" defer></script>
+    <script defer src="../js/i18n/translations.js"></script>
+    <script defer src="../js/i18n/i18n.js"></script>
+</head>
+
+<body>
+    <header id="TituloHorarios">
+        <h1 data-i18n="horarios.titulo">HORARIOS DEL COLISSEO</h1> 
+    </header> 
+
+    <main>
+        <section id="instalaciones">
+            <table class="horario" border="5">
+                <caption><strong data-i18n="horarios.instalaciones">HORARIO DE LAS INSTALACIONES</strong></caption>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th data-i18n="horarios.lunesaviernes">Lunes a Viernes</th>
+                        <th data-i18n="horarios.finde">Sabádo y Domingo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong data-i18n="horarios.sala">Zona de máquinas</strong></td>
+                        <td>08:30am - 10:30pm</td>
+                        <td>10:30am - 08:30pm</td>
+                    </tr>
+                    <tr>
+                        <td><strong data-i18n="horarios.piscina"> Zona de la piscina</strong></td>
+                        <td>09:30am - 09:30pm</td>
+                        <td>11:30am - 07:30pm</td>
+                    </tr>
+                </tbody>
+            </table><!--ReqH15-->
+        </section><!--ReqH3-->
+
+        <section id="actividades">
+            <table class="horario" border="5">
+                <caption><strong data-i18n="horarios.actividades">HORARIO DE ACTIVIDADES</strong></caption>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th data-i18n="horarios.lunes">Lunes</th>
+                        <th data-i18n="horarios.martes">Martes</th>
+                        <th data-i18n="horarios.miercoles">Miércoles</th>
+                        <th data-i18n="horarios.jueves">Jueves</th>
+                        <th data-i18n="horarios.viernes">Viernes</th>
+                        <th colspan="2" data-i18n="horarios.finde">Sábado y Domingo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2"><strong data-i18n="horarios.mañana"> Mañana (09:00 a 14:00)</strong></td>
+                        <td colspan="2">Boxeo</td>
+                        <td rowspan="4">Maratón</td>
+                        <td rowspan="2">Artes Marciales</td>
+                        <td rowspan="2">Fútbol</td>
+                        <td rowspan="4">Sesiones de yoga con Fran y Jessica</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Clase de zumba dirigida por nuestro entrenador Fran</td>
+                    </tr>
+                    <tr>
+                        <td><strong data-i18n="horarios.tarde"> Tarde (16:00 a 22:00)</strong></td>
+                        <td>Tai chi con Jessica</td>
+                        <td>Natación</td>
+                        <td>Natación</td>
+                        <td>Baloncesto</td>
+                    </tr>
+                </tbody>
+            </table><!--ReqH15-->
+        </section><!--ReqH3-->
+
+    </main>
+
+    <footer>
+        <p data-i18n="texto.eslogan">Colisseo: Tú progreso, nuestra prioridad.</p>
+        <figure>
+            <a href="../Recursos/colisseo_logo.png">
+                <img src="../Recursos/colisseo_logo.png" alt="Imagen del logo de Colisseo" title="Nuestro Logo" width="300">
+            </a>
+        </figure>
+    </footer
+</body>
+</html>
