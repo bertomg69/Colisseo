@@ -32,7 +32,7 @@
                     <label for="phone">Teléfono:</label>
                     <input type="tel" id="phone" name="phone" pattern="^(\+34|0034|34)?[67][0-9]{8}$"
                         onmouseover="handleMouseOver(this)" onmouseout="handleMouseOut(this)" required
-                        oninput="updatePreview()">
+                        oninput="updatePreview();">
                     <label for="email">Correo:</label>
                     <input type="email" id="email" name="email" onmouseover="handleMouseOver(this)"
                         onmouseout="handleMouseOut(this)" required oninput="updatePreview(); checkValidityState(this)">
@@ -40,7 +40,7 @@
                     <!--ReqI18N-->
                     <textarea id="message" name="message" data-i18n-placeholder="form.mensaje"  placeholder="Escribe aquí..." onmouseover="handleMouseOver(this)"
                         onmouseout="handleMouseOut(this)" required
-                        oninput="updatePreview(); checkValidityState(this)"></textarea>
+                        oninput="updatePreview()"></textarea>
                     <button type="submit" id="submit-btn">Enviar mensaje</button>
                     <button type="reset">Reset</button>
                 </fieldset>

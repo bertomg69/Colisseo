@@ -37,7 +37,7 @@ function validateForm(){
     errorBox.classList.remove('visible');
 
     if(!formulario.reportValidity()){ 
-    return false;
+        return false;
     }
     
     const customError = checkCustomRules();

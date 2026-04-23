@@ -65,16 +65,16 @@ article, section{ /*ReqC6*/
 
 nav{ /*ReqC6*/
     margin: 0.5rem;/*Req24*/;
-    padding: 0.25rem;/*Req24*/
-    margin-bottom: 600px;
-    margin-right: 850px;
-    margin-left: 850px;
+    padding-inline: 2rem;/*Req24*/
+    width: fit-content;
+    margin-inline: auto;
     border: 2px solid rgb(200, 200, 200);
     background-color: #1b263b;
 }
 
 nav > ul{/*ReqC11*/
     font-weight: bold;
+    padding: 0;
 }
 
 nav a {
@@ -171,6 +171,7 @@ button:hover {/* ReqC20*/
     background-color: #fff3d9;  
     box-shadow: 0 0 5px orange;    
 }
+
 
 
 

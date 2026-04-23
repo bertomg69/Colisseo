@@ -19,10 +19,10 @@
 <body class="cuerpo">
     <header>
         <div class="language-box"> <!--ReqI18N6-->
-            <label for="language-switcher" data-i18n="controls.language.label">Idioma</label>
-            <select id="language-switcher" onchange="setLocale(this.value)">
-                <option value="es" data-i18n="common.language.spanish">Español</option>
-                <option value="en" data-i18n="common.language.english">English</option>
+            <label id="idioma" for="language-switcher" data-i18n="controls.language.label">Idioma</label>
+            <select id="language-switcher" onchange="setLocale(this.value); cambiarIdioma(this.value)">
+                <option value="es">Español</option>
+                <option value="en">English</option>
             </select>
         </div>
 
@@ -39,7 +39,7 @@
                 <li><a href="#entrenadores" data-i18n="navigation.entrenadores"><em>Nuestros entrenadores</em><!--ReqH3--></a></li>
                 <li><a href="#estancias" data-i18n="navigation.instalaciones"><em>Instalaciones</em></a></li>
                 <li><a href="Ventanas/horarios.html" data-i18n="navigation.horarios"><em>Horarios</em><!--ReqH3--></a></li>
-                <li><a href="Ventanas/formulario.html" data-i18n="navigation.formulario"><em>Formulario de ingreso</em><!--ReqH3--></a></li>
+                <li><a href="Ventanas/formulario.html" data-i18n="navigation.formulario" target="_blank"><em>Formulario de ingreso</em><!--ReqH3--></a></li>
 
             </ul>
         </nav><!--ReqH8-->
@@ -49,8 +49,8 @@
             <p data-i18n="texto.info1"><cite>En Colisseo queremos que todos nuestros clientes estén contentos, pero sobretodo... EN FORMA!</cite></p>
             <p data-i18n="texto.info2">Tenemos actividades semanales y libre acceso a las instalaciones desde primera hasta última hora del día!</p>
             <p data-i18n="texto.info3">¡Y no te olvides de nuestra fiesta anual! No te preocupes, ese día nuestros entrenadores hacen la vista gorda ; ) </p>
-            <p><span data-i18n="events.monthlyMeeting.feeLabel">Cuota mensual:</span><em id="monthly-meeting-fee" data-fee="25"></em></p> <!--ReqI18N8-->
-            <p><span data-i18n="events.monthlyMeeting.dateLabel">Próxima fiesta anual</span> <em id="monthly-meeting-date" data-date="2026-07-15T19:00:00"></em></p> <!--ReqI18N8-->
+            <p><span data-i18n="events.monthlyMeeting.feeLabel">Cuota mensual: </span><em id="monthly-meeting-fee" data-fee="25"></em></p> <!--ReqI18N8-->
+            <p><span data-i18n="events.monthlyMeeting.dateLabel">Próxima fiesta anual: </span> <em id="monthly-meeting-date" data-date="2026-07-15T19:00:00"></em></p> <!--ReqI18N8-->
         </section><!--ReqH7-->
 
         <section id="entrenadores">
